@@ -1,0 +1,647 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root {
+    --color-blue-extralight: #3e92cc;
+    --color-blue-light: #347aae;
+    --color-blue-regular: #2a628f;
+    --color-blue-medium: #1f4666;
+    --color-blue-dark: #13293d ;
+    --color-white: #FFF;
+    --color-dark: #000;
+}
+
+header {
+    padding: 2rem 2rem 4rem;
+    width: 100%;
+    height: 5vh;
+    position: fixed;
+    background-color: var(--color-white);
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+header nav a.first_link {
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+    cursor: default;
+    color: var(--color-blue-dark);
+}
+
+header nav a img {
+    width: 32px;
+    height: 32px;
+}
+
+header nav a strong {
+    color: var(--color-blue-dark);
+    font-size: 1.3rem;
+}
+
+header nav a span {
+    color: var(--color-blue-dark);
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+header ul {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+header ul li a {
+    color: var(--color-blue-dark);
+    font-size: 1rem;
+    padding: .9rem 0;
+    transition: .3s;
+    text-transform: uppercase;
+}
+
+header ul li a:hover {
+    border-bottom: 1px solid var(--color-blue-dark);
+}
+
+header nav div.menu {
+    cursor: pointer;
+    display: none;
+}
+
+header nav div.menu span.bar {
+    display: block;
+    width: 28px;
+    height: 3px;
+    border-radius: 3px;
+    background: var(--color-dark);
+    margin: 5px auto;
+    transition: all .3s;
+}
+
+
+header nav div.menu span.bar:nth-child(1),
+header nav div.menu span.bar:nth-child(3) {
+    background: var(--color-blue-extralight);
+}
+
+main section#about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    width: 100%;
+    height: 100vh;
+    gap: 2rem;
+}
+
+main section#about div.info_about {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 400px;
+}
+
+main section#about div.info_about div.contents {
+    padding-top: 2rem;
+}
+
+main section#about div.info_about div.contents img {
+    width: 300px;
+    height: 320px;
+    border-radius: 50%;
+    padding-bottom: 2rem;
+}
+
+main section#about div.info_about div.contents h3 {
+    padding-bottom: .5rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    letter-spacing: .3rem;
+    color: var(--color-blue-dark);
+    cursor: default;
+}
+
+/* main section#about div.info_about div.contents h3::after {
+    position: absolute;
+    content: '';
+    width: 150px;
+    background-color: var(--color-blue-extralight);
+    height: 3px;
+    left: 660px;
+    bottom: 330px;
+    border-radius: 5px;
+} */
+
+main section#about div.info_about div.contents h6 {
+    padding: 2rem 0 2.5rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: var(--color-blue-dark);
+    cursor: default;
+}
+
+main section#about div.info_about div.social_medias,
+main section#projects div.box_project div.project_details div.project_link,
+footer div.content_contact div.social_media {
+    display: flex;
+    gap: 1.5rem;
+}
+
+main section#about div.info_about div.social_medias a img,
+main section#projects div.box_project div.project_details div.project_link a img,
+footer div.content_contact div.social_media a img {
+    width: 45px;
+    height: 45px;
+}
+
+main section#about div.content_about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+    max-width: 420px;
+}
+
+main section#about div.content_about h2 {
+    font-size: 5rem;
+    color: var(--color-blue-dark);
+    cursor: default;
+}
+
+main section#about div.content_about h4 {
+    font-size: 1.2rem;
+    padding-bottom: 2rem;
+    color: var(--color-blue-dark);
+    cursor: default;
+}
+
+main section#about div.content_about div.buttons_about {
+    display: flex;
+    gap: 1rem;
+    padding-bottom: 2rem;
+}
+
+main section#about div.content_about div.buttons_about a {
+    border: none;
+    background: var(--color-blue-extralight);
+    color: var(--color-white);
+    padding: 1rem 2rem;
+    font-size: 18px;
+    border-radius: 3px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+}
+
+main section#about div.content_about div.buttons_about a:hover {
+    background: var(--color-blue-light);
+}
+
+main section#about div.content_about p {
+    text-align: justify;
+    color: var(--color-blue-dark);
+    cursor: default;
+}
+
+main section#curriculum,
+main section#projects,
+footer {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+main section#curriculum,
+footer {
+    background-color: var(--color-blue-dark);
+}
+
+main section#curriculum div.title,
+main section#projects div.title,
+footer div.title {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    justify-content: center;
+    cursor: default;
+}
+
+main section#curriculum div.title img,
+main section#projects div.title img,
+footer div.title img {
+    width: 30px;
+    height: 30px;
+}
+
+main section#curriculum div.title h3,
+main section#projects div.title h3,
+footer div.title h3 {
+    font-size: 1.7rem;
+}
+
+main section#curriculum div.title h3,
+footer div.title h3 {
+    color: var(--color-white);
+}
+
+main section#curriculum div.content_curriculum,
+main section#projects div.content_projects,
+footer div.content_contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main section#curriculum div.content_curriculum div.experiences,
+main section#curriculum div.content_curriculum div.graduation,
+main section#curriculum div.content_curriculum div.habilities,
+main section#projects div.content_projects div.projects,
+footer div.content_contact div.contact {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+main section#curriculum div.content_curriculum h4.title_contents,
+footer div.content_contact h4.title_contents {
+    color: var(--color-white);
+    margin: 1rem 0 0;
+    cursor: default;
+}
+
+main section#curriculum div.content_curriculum div.test {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+main section#curriculum div.content_curriculum div.box {
+    display: flex;
+    margin: 1.8rem 0;
+    padding: 1rem;
+    width: 48%;
+    height: 200px;
+    background-color: var(--color-blue-extralight);
+    border-radius: 3px;
+}
+
+main section#curriculum div.content_curriculum div.box div.box_first {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .3rem;
+    width: 30%;
+}
+
+main section#curriculum div.content_curriculum div.box div.box_first h3,
+main section#curriculum div.content_curriculum div.habilities div.box h5,
+main section#projects div.box_project div.project_details h4 {
+    font-weight: 600;
+    font-size: 120%;
+    color: var(--color-white);
+    cursor: default;
+}
+
+main section#curriculum div.content_curriculum div.box div.box_first h4,
+main section#curriculum div.content_curriculum div.box div.box_first h5,
+main section#curriculum div.content_curriculum div.box div.box_first h6,
+main section#curriculum div.content_curriculum div.box div.box_second p,
+main section#curriculum div.content_curriculum div.box ul li,
+main section#projects div.box_project div.project_details h5,
+main section#projects div.box_project div.project_details p {
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--color-white);
+    cursor: default;
+}
+
+main section#curriculum div.content_curriculum div.box div.box_second {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70%;
+    padding-left: 1rem;
+}
+
+main section#curriculum div.content_curriculum div.graduation div.box {
+    width: 100%;
+}
+
+main section#curriculum div.content_curriculum div.graduation div.box div.box_second {
+    align-items: center;
+}
+
+main section#curriculum div.content_curriculum div.habilities div.box {
+    display: flex;
+    flex-direction: column;
+    margin: 1.8rem 0;
+    padding: 2rem;
+    width: 32%;
+    height: auto;
+    background-color: var(--color-blue-extralight);
+    color: var(--color-white);
+    border-radius: 3px;
+}
+
+main section#curriculum div.content_curriculum div.habilities div.box ul {
+    padding-top: 1rem;
+}
+
+main section#curriculum div.content_curriculum div.habilities div.box ul li {
+    padding: .7rem 0;
+}
+
+main section#curriculum div.content_curriculum div.habilities div.box ul li::before {
+    content:  url('../img/quadrado.png');
+    padding-right: .7rem;
+}
+
+main section#projects div.title h3 {
+    color: var(--color-blue-dark);
+}
+
+main section#projects div.box_project {
+    display: flex;
+    margin: 2rem 0;
+    background-color: var(--color-blue-medium);
+    height: 400px;
+}
+
+main section#projects div.box_project div.project_details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 2rem;
+    width: 55%;
+}
+
+main section#projects div.box_project div.project_image {
+    width: 45%;
+}
+
+main section#projects div.box_project div.project_details h4 {
+    padding-bottom: .5rem;
+}
+
+main section#projects div.box_project div.project_details h5 {
+    padding-bottom: 2rem;
+}
+
+main section#projects div.box_project div.project_details p {
+    text-align: justify;
+}
+
+main section#projects div.box_project div.project_details div.project_link {
+    padding-top: 2rem;
+}
+
+main section#projects div.box_project div.project_image img {
+    width: 100%;
+    height: 100%;
+}
+
+footer div.content_contact h4 {
+    padding-bottom: 1.5rem;
+}
+
+main section#projects div.box_project div.project_details div.project_link a.not_allowed:hover {
+    cursor: not-allowed;
+}
+
+footer div.content_contact div.social_media a img[alt='Logo GitHub'],
+main section#projects div.box_project div.project_details div.project_link a img[alt='Logo GitHub'] {
+    filter: invert(1);
+}
+
+
+
+@media screen and (max-width: 500px) {
+    header nav .first_link {
+        gap: .2rem;
+    }
+    
+    header nav a img {
+        width: 16px;
+        height: 16px;
+    }
+    
+    header nav a strong {
+        font-size: .8rem;
+    }
+    
+    header nav a span {
+        font-size: .5rem;
+    }
+
+    main section#about {
+        flex-direction: column;
+        height: auto;
+    }
+
+    main section#about div.info_about {
+        padding-top: 5rem;
+        padding-bottom: .5rem;
+    }
+
+    main section#curriculum div.content_curriculum div.experiences,
+    main section#curriculum div.content_curriculum div.graduation,
+    main section#curriculum div.content_curriculum div.habilities,
+    main section#projects div.content_projects div.projects,
+    footer div.content_contact div.contact {
+        width: 100%;
+    }
+
+    main section#curriculum div.content_curriculum div.box {
+        width: 100%;
+        height: 230px;
+    }
+
+    main section#curriculum div.content_curriculum div.box div.box_first {
+        width: 45%;
+    }
+    
+    main section#curriculum div.content_curriculum div.box div.box_second {
+        width: 55%;
+    }
+
+    main section#curriculum div.content_curriculum div.box div.box_first h3,
+    main section#curriculum div.content_curriculum div.habilities div.box h5,
+    main section#projects div.box_project div.project_details h4 {
+        font-size: 100%;
+    }
+
+    main section#curriculum div.content_curriculum div.box div.box_first h4,
+    main section#curriculum div.content_curriculum div.box div.box_first h5,
+    main section#curriculum div.content_curriculum div.box div.box_first h6,
+    main section#curriculum div.content_curriculum div.box ul li {
+        font-size: 12px;
+        text-align: center;
+    }
+
+    main section#curriculum div.content_curriculum div.box div.box_second p {
+        font-size: 12px;
+    }
+
+    main section#curriculum div.content_curriculum div.habilities div.box {
+        width: 100%;
+    }
+    
+    main section#curriculum div.content_curriculum div.habilities div.box ul li {
+        text-align: start;
+    }
+
+    main section#projects div.box_project {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    main section#projects div.box_project div.project_details {
+        padding: 1rem;
+        width: 100%;
+    }
+    
+    main section#projects div.box_project div.project_image {
+        width: 100%;
+    }
+
+    main section#projects div.box_project div.project_details:nth-child(2n-1) {
+        order: 1;
+    }
+    
+    main section#projects div.box_project div.project_details p {
+        text-align: justify;
+        font-size: 12px;
+    }
+
+    main section#projects div.box_project div.project_details div.project_link a img {
+        width: 30px;
+        height: 30px;
+    }
+
+    footer div#contact {
+        padding-bottom: 1.5rem;
+    }
+
+    footer div.content_contact h4.title_contents {
+        display: none;
+    }
+
+    footer div.content_contact div.social_media {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 1550px) {
+    header nav div.menu {
+        display: block;
+    }
+
+    header nav div.menu.active span.bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    header nav div.menu.active span.bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    header nav div.menu.active span.bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    header nav ul {
+        position: fixed;
+        right: -100%;
+        top: 70px;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 3rem;
+        background: var(--color-white);
+        gap: -10px;
+        transition: .3s;
+    }
+
+    header nav ul.active {
+        right: 0;
+    }
+
+    main section#curriculum div.content_curriculum div.experiences,
+    main section#curriculum div.content_curriculum div.graduation,
+    main section#curriculum div.content_curriculum div.habilities,
+    main section#projects div.content_projects div.projects,
+    footer div.content_contact div.contact {
+        width: 100%;
+    }
+
+    main section#curriculum div.content_curriculum div.box {
+        width: 100%;
+        height: 230px;
+    }
+
+    main section#curriculum div.content_curriculum div.box div.box_first {
+        width: 40%;
+    }
+    
+    main section#curriculum div.content_curriculum div.box div.box_second {
+        width: 60%;
+    }
+
+    main section#curriculum div.content_curriculum div.box div.box_first h3,
+    main section#curriculum div.content_curriculum div.habilities div.box h5,
+    main section#projects div.box_project div.project_details h4 {
+        font-size: 100%;
+    }
+
+    main section#curriculum div.content_curriculum div.box div.box_first h4,
+    main section#curriculum div.content_curriculum div.box div.box_first h5,
+    main section#curriculum div.content_curriculum div.box div.box_first h6,
+    main section#curriculum div.content_curriculum div.box ul li {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    main section#curriculum div.content_curriculum div.box div.box_second p {
+        font-size: 16px;
+    }
+
+    main section#curriculum div.content_curriculum div.habilities div.box {
+        width: 100%;
+    }
+    
+    main section#curriculum div.content_curriculum div.habilities div.box ul li {
+        text-align: start;
+    }
+    
+    main section#projects div.box_project div.project_details {
+        padding: 1rem;
+    }
+    
+    main section#projects div.box_project div.project_details p {
+        text-align: justify;
+        font-size: 16px;
+    }
+
+    main section#projects div.box_project div.project_details div.project_link a img {
+        width: 40px;
+        height: 40px;
+    }
+}
